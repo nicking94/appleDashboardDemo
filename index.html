@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz,wght@8..144,100..1000&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Login</title>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              primario: "#404040",
+              secundario: "#00008B",
+              textos: "#323232",
+            },
+            fontFamily: {
+              roboto: ["Roboto Flex", "sans-serif"],
+            },
+            fontSize: {
+              linkD: "1rem",
+              linkM: ".8rem",
+            },
+          },
+        },
+      };
+    </script>
+  </head>
+  <body class="font-roboto bg-gray-100">
+    <div class="flex justify-center w-full py-2 h-[20vh]">
+      <a href="#">
+        <img src="assets/logo.png" alt="logo" class="max-h-[8rem]" />
+      </a>
+    </div>
+    <div class="h-[80vh] flex justify-center md:items-center">
+      <div
+        class="flex flex-col bg-white p-8 rounded-md shadow-md w-full max-w-md"
+      >
+        <h2 class="text-2xl font-bold text-primario mb-6 text-center">
+          Iniciar Sesión
+        </h2>
+        <form id="loginForm">
+          <div class="mb-4">
+            <label for="email" class="block text-textos mb-2"
+              >Correo Electrónico</label
+            >
+            <input
+              type="email"
+              id="email"
+              class="w-full px-3 py-2 border border-gray-300 rounded-md outline-none"
+              placeholder="Ingrese su correo electrónico"
+              required
+            />
+            <p id="emailError" class="text-red-500 text-sm mt-1 hidden">
+              Ingrese un correo válido
+            </p>
+          </div>
+          <div class="mb-6 relative">
+            <label for="password" class="block text-textos mb-2"
+              >Contraseña</label
+            >
+            <div class="flex items-center border border-gray-300 rounded-md">
+              <input
+                type="password"
+                id="password"
+                class="flex w-full px-3 py-2 outline-none"
+                placeholder="Ingrese su contraseña"
+                required
+              />
+              <span id="togglePassword" class="cursor-pointer mr-2">
+                <img
+                  src="assets/vision_open.png"
+                  alt="Mostrar contraseña"
+                  class="h-6 w-6"
+                />
+              </span>
+            </div>
+            <p id="passwordError" class="text-red-500 text-sm mt-1 hidden">
+              Ingrese una contraseña válida
+            </p>
+          </div>
+          <div class="flex items-center justify-between mb-4">
+            <label class="flex items-center text-textos">
+              <input type="checkbox" class="mr-2 cursor-pointer" />
+              Recuérdame
+            </label>
+            <a href="#" class="text-textos font-semibold hover:underline"
+              >¿Olvidaste tu contraseña?</a
+            >
+          </div>
+          <button
+            type="submit"
+            class="w-full bg-textos text-white py-2 rounded-md hover:bg-primario transition-all duration-200"
+          >
+            Iniciar Sesión
+          </button>
+        </form>
+      </div>
+    </div>
+    <script src="validacion.js"></script>
+  </body>
+</html>

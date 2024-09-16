@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz,wght@8..144,100..1000&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Inicio</title>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              primario: "#404040",
+              secundario: "#00008B",
+              textos: "#323232",
+            },
+            fontFamily: {
+              roboto: ["Roboto Flex", "sans-serif"],
+            },
+            fontSize: {
+              linkD: "1rem",
+              linkM: ".8rem",
+            },
+          },
+        },
+      };
+    </script>
+  </head>
+  <body class="flex font-roboto">
+    <!-- Aside -->
+    <aside
+      id="aside"
+      class="fixed top-0 left-0 min-h-screen w-screen md:w-[20rem] bg-gray-300 text-textos transition-transform"
+    >
+      <!-- Toggle button inside the aside -->
+      <button id="toggleAsideBtn" class="p-5">
+        <!-- Close icon (initially visible because aside is open) -->
+        <svg
+          id="closeIcon"
+          xmlns="http://www.w3.org/2000/svg"
+          class="h-6 w-6"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke="currentColor"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="M6 18L18 6M6 6l12 12"
+          />
+        </svg>
+        <!-- Menu icon (hidden initially) -->
+        <svg
+          id="menuIcon"
+          xmlns="http://www.w3.org/2000/svg"
+          class="h-6 w-6 hidden"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke="currentColor"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="M4 6h16M4 12h16m-7 6h7"
+          />
+        </svg>
+      </button>
+      <div class="p-5 h-screen">
+        <div class="flex justify-center">
+          <a href="inicio.html">
+            <img
+              src="assets/logo.png"
+              alt="logo"
+              class="max-h-[8rem] md:hidden"
+            />
+          </a>
+        </div>
+        <ul class="flex flex-col space-y-5 pt-20">
+          <a
+            href="modelos.html"
+            class="rounded-md bg-gray-100 hover:bg-gray-500 hover:text-white transition-all duration-200 px-4 py-1"
+          >
+            <li class="flex items-center justify-between">
+              <p class="font-semibold">Modelos</p>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="w-[1.5rem] h-[1.5rem]"
+                viewBox="0 0 24 24"
+                style="fill: currentColor"
+              >
+                <path
+                  d="M10.707 17.707 16.414 12l-5.707-5.707-1.414 1.414L13.586 12l-4.293 4.293z"
+                ></path>
+              </svg>
+            </li>
+          </a>
+          <a
+            href="proveedores.html"
+            class="rounded-md bg-gray-100 hover:bg-gray-500 hover:text-white transition-all duration-200 px-4 py-1"
+          >
+            <li class="flex items-center justify-between">
+              <p class="font-semibold">Proveedores</p>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="w-[1.5rem] h-[1.5rem]"
+                viewBox="0 0 24 24"
+                style="fill: currentColor"
+              >
+                <path
+                  d="M10.707 17.707 16.414 12l-5.707-5.707-1.414 1.414L13.586 12l-4.293 4.293z"
+                ></path>
+              </svg>
+            </li>
+          </a>
+          <a
+            href="compras.html"
+            class="rounded-md bg-gray-100 hover:bg-gray-500 hover:text-white transition-all duration-200 px-4 py-1"
+          >
+            <li class="flex items-center justify-between">
+              <p class="font-semibold">Compras</p>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="w-[1.5rem] h-[1.5rem]"
+                viewBox="0 0 24 24"
+                style="fill: currentColor"
+              >
+                <path
+                  d="M10.707 17.707 16.414 12l-5.707-5.707-1.414 1.414L13.586 12l-4.293 4.293z"
+                ></path>
+              </svg>
+            </li>
+          </a>
+          <a
+            href="clientes.html"
+            class="rounded-md bg-gray-100 hover:bg-gray-500 hover:text-white transition-all duration-200 px-4 py-1"
+          >
+            <li class="flex items-center justify-between">
+              <p class="font-semibold">Clientes</p>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="w-[1.5rem] h-[1.5rem]"
+                viewBox="0 0 24 24"
+                style="fill: currentColor"
+              >
+                <path
+                  d="M10.707 17.707 16.414 12l-5.707-5.707-1.414 1.414L13.586 12l-4.293 4.293z"
+                ></path>
+              </svg>
+            </li>
+          </a>
+          <a
+            href="ventas.html"
+            class="rounded-md bg-gray-100 hover:bg-gray-500 hover:text-white transition-all duration-200 px-4 py-1"
+          >
+            <li class="flex items-center justify-between">
+              <p class="font-semibold">Ventas</p>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="w-[1.5rem] h-[1.5rem]"
+                viewBox="0 0 24 24"
+                style="fill: currentColor"
+              >
+                <path
+                  d="M10.707 17.707 16.414 12l-5.707-5.707-1.414 1.414L13.586 12l-4.293 4.293z"
+                ></path>
+              </svg>
+            </li>
+          </a>
+          <a
+            href="caja_diaria.html"
+            class="rounded-md bg-gray-100 hover:bg-gray-500 hover:text-white transition-all duration-200 px-4 py-1"
+          >
+            <li class="flex items-center justify-between">
+              <p class="font-semibold">Caja diaria</p>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="w-[1.5rem] h-[1.5rem]"
+                viewBox="0 0 24 24"
+                style="fill: currentColor"
+              >
+                <path
+                  d="M10.707 17.707 16.414 12l-5.707-5.707-1.414 1.414L13.586 12l-4.293 4.293z"
+                ></path>
+              </svg>
+            </li>
+          </a>
+          <a
+            href="estadisticas.html"
+            class="rounded-md bg-gray-100 hover:bg-gray-500 hover:text-white transition-all duration-200 px-4 py-1"
+          >
+            <li class="flex items-center justify-between">
+              <p class="font-semibold">Estadísticas</p>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="w-[1.5rem] h-[1.5rem]"
+                viewBox="0 0 24 24"
+                style="fill: currentColor"
+              >
+                <path
+                  d="M10.707 17.707 16.414 12l-5.707-5.707-1.414 1.414L13.586 12l-4.293 4.293z"
+                ></path>
+              </svg>
+            </li>
+          </a>
+        </ul>
+      </div>
+    </aside>
+
+    <div
+      id="mainContent"
+      class="flex-1 ml-[20rem] transition-all overflow-x-hidden"
+    >
+      <nav class="flex justify-between items-center px-20 py-5 border-b-2">
+        <button id="openAsideBtn" class="p-5 hidden">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="h-6 w-6"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M4 6h16M4 12h16m-7 6h7"
+            />
+          </svg>
+        </button>
+        <a href="inicio.html">
+          <img
+            src="assets/logo.png"
+            alt="logo"
+            class="max-h-[8rem] hidden md:flex"
+          />
+        </a>
+        <div class="flex flex-col justify-center items-center">
+          <img src="assets/profile.png" alt="profile" class="max-h-[4rem]" />
+          <p class="font-bold">Usuario</p>
+          <a href="index.html">Cerrar sesión</a>
+        </div>
+      </nav>
+
+      <div><h1 class="text-4xl text-center mt-10">Inicio</h1></div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
